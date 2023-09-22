@@ -4,48 +4,86 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Incident Sharing</title>
+
+    <!-- Include Bootstrap CSS from a Content Delivery Network (CDN) -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- Link to your custom CSS file -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Browse</a></li>
-                <li><a href="#">Sign In</a></li>
-                <li><a href="#">Sign Up</a></li>
-            </ul>
+    <header class="bg-primary text-white">
+        <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+            <a class="navbar-brand text-white" href="#">Incident Sharing Platform</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">Browse</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">Sign In</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">Sign Up</a>
+                    </li>
+                </ul>
+            </div>
         </nav>
-        <h1>Incident Sharing Platform</h1>
-        <div class="user-info">
-            <img src="profile-image.jpg" alt="User Profile Image">
-            <p>Name</p>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h1 class="mt-5">Welcome to Incident Sharing</h1>
+                </div>
+                <div class="col-md-6 text-right">
+                    <div class="user-info mt-4">
+                        <img src="profile-image.jpg" alt="User Profile Image" class="rounded-circle" width="50" height="50">
+                        <p class="mb-0">Name</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </header>
 
-    <main>
+    <main class="container mt-5">
         <section id="incident-form">
             <h2>Share an Incident</h2>
             <form>
-                <input type="text" placeholder="Incident Title">
-                <textarea placeholder="Describe the incident..."></textarea>
-                <input type="file" accept="image/*" multiple>
-                <button type="submit">Share</button>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Incident Title">
+                </div>
+                <div class="form-group">
+                    <textarea class="form-control" placeholder="Describe the incident..."></textarea>
+                </div>
+                <div class="form-group">
+                    <input type="file" class="form-control-file" accept="image/*" multiple>
+                </div>
+                <button type="submit" class="btn btn-primary">Share</button>
             </form>
         </section>
 
-        <section id="incidents">
+        <section id="incidents" class="mt-4">
             <!-- List of shared incidents goes here -->
-            <div class="incident">
+            <div class="incident mb-4">
                 <h3>Incident Title</h3>
                 <p>This is a description of the incident. It can include text, images, and more.</p>
-                <img src="incident-image.jpg" alt="Incident Image">
+                <img src="incident-image.jpg" alt="Incident Image" class="img-fluid">
             </div>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2023 Incident Sharing Platform</p>
+    <footer class="bg-primary text-white text-center py-3">
+        &copy; 2023 Incident Sharing Platform
     </footer>
+
+    <!-- Include Bootstrap JavaScript (popper.js and jQuery are required dependencies) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
