@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Incident Sharing</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Browse</a></li>
+                <li><a href="#">Sign In</a></li>
+                <li><a href="#">Sign Up</a></li>
+            </ul>
+        </nav>
+        <h1>Incident Sharing Platform</h1>
+        <div class="user-info">
+            <img src="profile-image.jpg" alt="User Profile Image">
+            <p>Name</p>
+        </div>
+    </header>
+
+    <main>
+        <section id="incident-form">
+            <h2>Share an Incident</h2>
+            <form>
+                <input type="text" placeholder="Incident Title">
+                <textarea placeholder="Describe the incident..."></textarea>
+                <input type="file" accept="image/*" multiple>
+                <button type="submit">Share</button>
+            </form>
+        </section>
+
+        <section id="incidents">
+            <!-- List of shared incidents goes here -->
+            <div class="incident">
+                <h3>Incident Title</h3>
+                <p>This is a description of the incident. It can include text, images, and more.</p>
+                <img src="incident-image.jpg" alt="Incident Image">
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Incident Sharing Platform</p>
+    </footer>
+</body>
+</html>
